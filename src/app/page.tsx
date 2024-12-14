@@ -9,13 +9,20 @@ export default function Home() {
 
   const screenSize = useScreenSize();
 
-  if (screenSize === "mobile" || screenSize === "tablet") {
-    return (
-      <MobileView />
-    )
-  } else {
-    return (
-      <DesktopView />
-    );
+  switch (screenSize) {
+    case "mobile":
+    case "tablet":
+      return (
+        <MobileView />
+      );
+    case "desktop":
+      return (
+        <DesktopView />
+      );
+    default:
+      return (
+        <div>
+        </div>
+      );
   }
 }
