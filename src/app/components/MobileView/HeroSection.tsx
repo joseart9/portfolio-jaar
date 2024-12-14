@@ -12,7 +12,7 @@ export default function HeroSection({ hrefJump }: { hrefJump?: any }) {
     const { lang, changeLang } = useLang("es");
 
     return (
-        <section id="inicio" className="h-screen w-full flex flex-grow flex-col">
+        <section id="inicio" className="min-h-screen h-screen w-full flex flex-grow flex-col">
             <div>
                 <div className="flex flex-row gap-7 mt-12">
                     <h1 className="text-4xl font-bold mb-5">
