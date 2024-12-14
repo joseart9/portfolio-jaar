@@ -1,4 +1,5 @@
 import { Button } from "@nextui-org/button";
+import { Link } from "@nextui-org/react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
@@ -57,11 +58,9 @@ export default function HeroSection({ hrefJump }: { hrefJump?: any }) {
                     </a>
                 </section>
 
-                <a href="#about">
-                    <Button isIconOnly variant="light" color="primary" className="absolute bottom-0 left-1/2 transform -translate-x-1/2 animate-bounce animate-infinite">
-                        <IoIosArrowDown className="text-blue-500 size-12" />
-                    </Button>
-                </a>
+                <Button as={Link} href="#about" isIconOnly variant="light" color="primary" className="absolute bottom-0 left-1/2 transform -translate-x-1/2 animate-bounce animate-infinite">
+                    <IoIosArrowDown className="text-blue-500 size-12" />
+                </Button>
             </div>
         </section>
     );
