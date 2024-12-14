@@ -17,7 +17,7 @@ export default function NavbarComponent({ activeHash }: { activeHash: any }) {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     return (
-        <Navbar position="sticky" shouldHideOnScroll={false} isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+        <Navbar position="sticky" shouldHideOnScroll={false} isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} className="bg-base">
             <NavbarContent className="sm:hidden" justify="start">
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
