@@ -46,16 +46,12 @@ export default function HeroSection({ hrefJump }: { hrefJump?: any }) {
                 </section>
 
                 <section className="flex flex-row gap-2 mt-6">
-                    <a href="https://github.com/joseart9">
-                        <Button isIconOnly color="primary" variant="light" className="w-11 h-11">
-                            <FaGithub className="w-10 h-10 text-blue-500" />
-                        </Button>
-                    </a>
-                    <a href="https://www.linkedin.com/in/jos%C3%A9-arturo-arguelles-r%C3%ADos-b93b75315/">
-                        <Button isIconOnly color="primary" variant="light" className="w-11 h-11">
-                            <FaLinkedinIn className="w-10 h-10 text-blue-500" />
-                        </Button>
-                    </a>
+                    <Button href="https://github.com/joseart9" as={Link} isIconOnly color="primary" variant="light" className="w-11 h-11">
+                        <FaGithub className="w-10 h-10 text-blue-500" />
+                    </Button>
+                    <Button as={Link} href="https://www.linkedin.com/in/jos%C3%A9-arturo-arguelles-r%C3%ADos-b93b75315/" isIconOnly color="primary" variant="light" className="w-11 h-11">
+                        <FaLinkedinIn className="w-10 h-10 text-blue-500" />
+                    </Button>
                 </section>
 
                 <Button as={Link} href="#about" isIconOnly variant="light" color="primary" className="absolute bottom-0 left-1/2 transform -translate-x-1/2 animate-bounce animate-infinite">
