@@ -35,9 +35,9 @@ export default function MainComponent() {
     console.log(activeHash);
 
     return (
-        <main className='overflow-x-hidden'>
+        <main className=''>
             <Nabvar activeHash={activeHash} />
-            <div className='px-4'>
+            <div className='px-4 overflow-x-hidden'>
                 <HeroSection />
                 <Aboutme />
                 <div className='h-[70px]' />
