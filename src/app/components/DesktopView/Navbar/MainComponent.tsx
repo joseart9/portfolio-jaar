@@ -32,7 +32,7 @@ export default function NavbarComponent({ activeHash }: { activeHash: any }) {
             <NavbarContent justify="end">
                 <NavbarItem className="flex flex-row items-center gap-4">
 
-                    <Button href="CV Arturo Arguelles 2024.pdf" download as={Link} className="text-primary text-xl font-black" color="primary" variant="light">
+                    <Button href="ARTURO ARGUELLES CV 2025.pdf" download as={Link} className="text-primary text-xl font-black" color="primary" variant="light">
                         Descargar CV
                     </Button>
 
