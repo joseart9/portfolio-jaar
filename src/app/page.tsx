@@ -20,9 +20,6 @@ export default function Home() {
         <DesktopView />
       );
     default:
-      return (
-        <div>
-        </div>
-      );
+      return null;
   }
 }
