@@ -31,7 +31,7 @@ const DesktopMockUp: any = ({ project }: { project: Project }) => {
     )
 }
 
-export default function ProjectCard({ project }: { project: any }) {
+export default function ProjectCard({ project, desc, lang }: { project: any; desc: string; lang: any }) {
     return (
         <Card isHoverable shadow="none" isFooterBlurred className="max-w-[400px] h-full bg-transparent border-0" isPressable onPress={() => window.open(project.url, "_blank")}>
             <CardHeader className="flex gap-3 items-center justify-center">
@@ -46,11 +46,11 @@ export default function ProjectCard({ project }: { project: any }) {
                             {project.name}
                         </p>
                         <Chip size="lg" color={project.finished ? "success" : "warning"} variant="flat">
-                            {project.finished ? "Terminado" : "En progreso"}
+                            {project.finished ? lang.misc.finished : lang.misc.inProgress}
                         </Chip>
                     </div>
                     <p className="text-default-600 text-sm px-5">
-                        {project.description}
+                        {desc}
                     </p>
                 </div>
             </CardBody>

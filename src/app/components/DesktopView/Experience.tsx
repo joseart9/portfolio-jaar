@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-export default function Experience() {
+export default function Experience({ lang }: { lang: any }) {
     return (
         <section id="experience" className="min-h-screen w-full grid grid-cols-12 items-center px-2">
             <div
@@ -28,15 +28,15 @@ export default function Experience() {
                             <time className="italic text-default-600">2023</time>
                             <div className="text-lg text-default-800 font-black">AbdoTech</div>
                             <p className="text-default-600 font-semibold mb-4 leading-relaxed text-pretty">
-                                Participé en varios proyectos de desarrollo web, lo que me permitió ampliar mi experiencia con tecnologías de front end y back end como React, GraphQL y MongoDB. Mi contribución abarcó desde el diseño hasta la implementación, fortaleciendo mis habilidades de programación y trabajo en equipo.
+                                {lang.experience.work1.desc1}
                             </p>
 
                             <p className="text-default-600 font-semibold mb-4 leading-relaxed text-pretty">
-                                Lideré la creación y el lanzamiento de una aplicación para iOS utilizando Flutter, colaborando con un equipo de desarrolladores.
+                                {lang.experience.work1.desc2}
                             </p>
 
                             <p className="text-default-600 font-semibold leading-relaxed text-pretty">
-                                Trabajé con tecnologías de inteligencia artificial, específicamente utilizando LangChain, donde desarrollé e integré soluciones impulsadas por IA para mejorar diversas aplicaciones y procesos.
+                                {lang.experience.work1.desc3}
                             </p>
 
                         </div>
@@ -67,15 +67,15 @@ export default function Experience() {
                             <div className="text-lg font-black font-default-800">Wizeline</div>
 
                             <p className="text-default-600 font-semibold mb-4 leading-relaxed text-pretty">
-                                Adquirí experiencia con pruebas unitarias utilizando Vitest, asegurando la fiabilidad y robustez de las aplicaciones.
+                                {lang.experience.work2.desc1}
                             </p>
 
                             <p className="text-default-600 font-semibold mb-4 leading-relaxed pr-4 text-pretty">
-                                Desarrollé y perfeccioné componentes de la interfaz de usuario utilizando Remix y Tailwind CSS, contribuyendo a la creación de interfaces fáciles de usar y visualmente atractivas.
+                                {lang.experience.work2.desc2}
                             </p>
 
                             <p className="text-default-600 font-semibold leading-relaxed text-pretty">
-                                Mejoré mis habilidades en pruebas y desarrollo front end mientras trabajaba en un entorno dinámico y colaborativo.
+                                {lang.experience.work2.desc3}
                             </p>
                         </div>
                         <hr />
@@ -103,15 +103,15 @@ export default function Experience() {
                             <time className="italic text-default-600">2024</time>
                             <div className="text-lg text-default-800 font-black">Freelance</div>
                             <p className="text-default-600 font-semibold mb-4 leading-relaxed text-pretty">
-                                Lidere la creación de aplicaciones web para clientes de diversos sectores, escuchando sus necesidades y proporcionando soluciones personalizadas y efectivas.
+                                {lang.experience.work3.desc1}
                             </p>
 
                             <p className="text-default-600 font-semibold mb-4 leading-relaxed text-pretty">
-                                Comencé a desarrollar proyectos de forma independiente, lo que me permitió adquirir experiencia en la creación de aplicaciones web dinámicas y responsivas, así como en la gestión de proyectos y clientes.
+                                {lang.experience.work3.desc2}
                             </p>
 
                             <p className="text-default-600 font-semibold leading-relaxed text-pretty">
-                                Colaboré con otros desarrolladores y diseñadores para crear soluciones innovadoras y atractivas para una variedad de proyectos.
+                                {lang.experience.work3.desc3}
                             </p>
 
                         </div>
@@ -127,7 +127,7 @@ export default function Experience() {
                 viewport={{ once: true }}
 
                 className="flex flex-row justify-center items-center h-full w-full col-span-3 text-end">
-                <h1 className="text-6xl font-bold text-primary/50">Experiencia Laboral</h1>
+                <h1 className="text-6xl font-bold text-primary/50">{lang.experience.title}</h1>
             </motion.div>
 
         </section>

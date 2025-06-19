@@ -3,7 +3,7 @@ import data from "@/app/data/projects";
 
 import { motion } from "framer-motion";
 
-export default function Projects() {
+export default function Projects({ lang }: any) {
     return (
         <section id="projects" className="min-h-screen mb-[100px] flex-grow w-full h-full flex flex-col justify-center items-center">
             <motion.h1
@@ -21,7 +21,7 @@ export default function Projects() {
                         viewport={{ once: true }}
                         className="h-auto"
                         key={index}>
-                        <ProjectCard project={project} />
+                        <ProjectCard lang={lang} desc={lang.projects[`desc${index + 1}`]} project={project} />
                     </motion.div>
                 ))}
             </section>

@@ -5,9 +5,11 @@ import Proyects from "@/app/components/DesktopView/Projects";
 import Footer from "../Footer";
 import Navbar from "./Navbar";
 import { useEffect, useState } from "react";
+import useLang from "@/hooks/useLang";
 
 export default function MainComponent() {
     const [activeHash, setActiveHash] = useState("");
+    const { lang, changeLang } = useLang("es");
 
     useEffect(() => {
         const sections = document.querySelectorAll("section[id]");
@@ -34,12 +36,12 @@ export default function MainComponent() {
 
     return (
         <main>
-            <Navbar activeHash={activeHash} />
+            <Navbar activeHash={activeHash} lang={lang} setLang={changeLang} />
             <div className="container mx-auto max-w-6xl px-8">
-                <HeroSection />
-                <Aboutme />
-                <Experience />
-                <Proyects />
+                <HeroSection lang={lang} />
+                <Aboutme lang={lang} />
+                <Experience lang={lang} />
+                <Proyects lang={lang} />
                 <Footer />
             </div>
         </main>

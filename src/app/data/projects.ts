@@ -17,9 +17,9 @@ export interface Tech {
 // Icons
 
 // TypeScript
-import { TbBrandTypescript } from "react-icons/tb";
+import { TbBrandFramer, TbBrandTypescript } from "react-icons/tb";
 // React
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaStripe } from "react-icons/fa";
 // NextJS
 import { TbBrandNextjs } from "react-icons/tb";
 //Tailwind
@@ -28,8 +28,55 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFirebase } from "react-icons/io5";
 // Vercel
 import { IoLogoVercel } from "react-icons/io5";
+// Supabase
+import { TbBrandSupabase } from "react-icons/tb";
 
 const data: Project[] = [
+  {
+    name: "GOAT Boots",
+    description:
+      "Tienda en linea y Landing Page de calzado de protección industrial, con carrito de compras y checkout. Panel administrativo para gestionar productos y pedidos.",
+    technologies: [
+      {
+        name: "React",
+        logo: FaReact,
+        logoColor: "text-blue-500",
+      },
+      {
+        name: "Next.js",
+        logo: TbBrandNextjs,
+        logoColor: "text-black",
+      },
+      {
+        name: "Tailwind",
+        logo: RiTailwindCssFill,
+        logoColor: "text-blue-500",
+      },
+      {
+        name: "Supabase",
+        logo: TbBrandSupabase,
+        logoColor: "text-green-500",
+      },
+      {
+        name: "Vercel",
+        logo: IoLogoVercel,
+        logoColor: "text-black",
+      },
+      {
+        name: "TypeScript",
+        logo: TbBrandTypescript,
+        logoColor: "text-blue-500",
+      },
+      {
+        name: "Framer Motion",
+        logo: TbBrandFramer,
+        logoColor: "text-black",
+      },
+    ],
+    image: "goat.webp",
+    finished: true,
+    url: "https://goatboots.mx",
+  },
   {
     name: "RC Servicios Inmobiliarios",
     description:
@@ -66,10 +113,10 @@ const data: Project[] = [
         logoColor: "text-blue-500",
       },
     ],
-    image: "https://i.ibb.co/YXfxfYs/627f7baef2f1838d8cdedeb4a8f70791.jpg",
-    finished: false,
+    image: "rc.webp",
+    finished: true,
     url: "https://rc-servicios-inmobiliarios.vercel.app/",
-    isDesktop: true,
+    isDesktop: false,
   },
   {
     name: "MatsanMX",
@@ -110,46 +157,6 @@ const data: Project[] = [
     image: "matsan.jpeg",
     finished: true,
     url: "https://matsanmx.vercel.app",
-  },
-  {
-    name: "URCA",
-    description:
-      "Catalogo en linea de Propiedades en renta, o venta. Con sistema de búsqueda y filtros. Panel administrativo para gestionar propiedades.",
-    technologies: [
-      {
-        name: "React",
-        logo: FaReact,
-        logoColor: "text-blue-500",
-      },
-      {
-        name: "Next.js",
-        logo: TbBrandNextjs,
-        logoColor: "text-black",
-      },
-      {
-        name: "Tailwind",
-        logo: RiTailwindCssFill,
-        logoColor: "text-blue-500",
-      },
-      {
-        name: "Firebase",
-        logo: IoLogoFirebase,
-        logoColor: "text-yellow-500",
-      },
-      {
-        name: "Vercel",
-        logo: IoLogoVercel,
-        logoColor: "text-black",
-      },
-      {
-        name: "TypeScript",
-        logo: TbBrandTypescript,
-        logoColor: "text-blue-500",
-      },
-    ],
-    image: "urca.jpeg",
-    finished: true,
-    url: "https://urca-hazel.vercel.app/",
   },
 ];
 

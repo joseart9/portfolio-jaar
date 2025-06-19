@@ -3,11 +3,17 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import Typewriter from 'typewriter-effect';
-import useLang from "@/hooks/useLang";
 
+import { useState, useEffect } from "react";
 
-export default function HeroSection({ hrefJump }: { hrefJump?: any }) {
-    const { lang, changeLang } = useLang("es");
+export default function HeroSection({ hrefJump, lang }: { hrefJump?: any; lang: any; }) {
+    const [typewriterKey, setTypewriterKey] = useState(0);
+
+    useEffect(() => {
+        // Cambia la clave del componente para forzar su re-renderizado
+        setTypewriterKey((prevKey) => prevKey + 1);
+    }, [lang]);
+
     return (
         <section id="inicio" className="min-h-screen w-full justify-center flex-grow flex flex-col">
             <h1 className="text-6xl font-bold mb-8">
@@ -27,17 +33,18 @@ export default function HeroSection({ hrefJump }: { hrefJump?: any }) {
                 <section className="text-default-900">
                     <div className="text-5xl font-bold leading-snug mb-4">
                         <Typewriter
+                            key={typewriterKey}
                             options={{
                                 delay: 50,
                                 cursor: '|',
                             }}
                             onInit={(typewriter) => {
                                 typewriter
-                                    .typeString('Me llamo ')
+                                    .typeString(lang.hero.title2)
                                     .pauseFor(500)
-                                    .typeString('<span class="text-blue-500 font-black">Arturo Arguelles</span>,')
+                                    .typeString('<span class="text-blue-500 font-black">Arturo Arguelles</span>, ')
                                     .pauseFor(1000)
-                                    .typeString('<br>soy un desarrollador web ')
+                                    .typeString(lang.hero.title3)
                                     .pauseFor(500)
                                     .typeString('<span class="text-blue-500 font-black">Fullstack</span>.')
                                     .start();
@@ -45,7 +52,7 @@ export default function HeroSection({ hrefJump }: { hrefJump?: any }) {
                         />
                     </div>
                     <h3 className="text-default-600 text-xl">
-                        Enfocado en crear soluciones digitales que combinen funcionalidad y estética, colocando siempre al usuario en el centro.
+                        {lang.hero.subTitle}
                     </h3>
                 </section>
 
